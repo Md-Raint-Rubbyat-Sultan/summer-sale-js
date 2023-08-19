@@ -48,7 +48,7 @@
     </header>
     <!-- Main section -->
     <main class="max-w-7xl py-32 mx-auto">
-        <section class="grid grid-cols-2 lg:grid-cols-4 gap-6 px-2 md:px-3 lg:px-0">
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 px-2 md:px-3 lg:px-0">
             <!-- card section -->
             <div class="col-span-1 lg:col-span-3">
                 <!-- kitchen section -->
@@ -57,8 +57,8 @@
                     <!-- cards section -->
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         <!-- card 1 -->
-                        <div class="card bg-white">
-                            <div class="bg-muteText m-1 md:m-4 rounded">
+                        <div onclick="itemAdder('kitchenItem1', 'kitchenItem1Price')" class="card bg-white">
+                            <div class="bg-muteText m-1 sm:m-4 rounded">
                                 <figure class="p-6">
                                     <img src="/images/prod1.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -71,13 +71,13 @@
                                     <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" checked />
                                     <input type="radio" name="rating-1" class="mask mask-star bg-orange-400" />
                                 </div>
-                                <h2 class="card-title text-regText font-semibold">K. Accessories</h2>
-                                <p class="text-muteText"><span>39.00</span> TK</p>
+                                <h2 id="kitchenItem1" class="card-title text-regText font-semibold">K. Accessories</h2>
+                                <p class="text-muteText"><span id="kitchenItem1Price">39.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card 2 -->
-                        <div class="card bg-white">
-                            <div class="bg-muteText m-1 md:m-4 rounded">
+                        <div onclick="itemAdder('kitchenItem2', 'kitchenItem2Price')" class="card bg-white">
+                            <div class="bg-muteText m-1 sm:m-4 rounded">
                                 <figure class="p-6">
                                     <img src="/images/prod2.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -90,13 +90,13 @@
                                     <input type="radio" name="rating-2" class="mask mask-star bg-orange-400" />
                                     <input type="radio" name="rating-2" class="mask mask-star bg-orange-400" />
                                 </div>
-                                <h2 class="card-title text-regText font-semibold">K. Accessories</h2>
-                                <p class="text-muteText"><span>25.00</span> TK</p>
+                                <h2 id="kitchenItem2" class="card-title text-regText font-semibold">K. Accessories</h2>
+                                <p class="text-muteText"><span id="kitchenItem2Price">25.00</span> TK</p>
                             </div>
                         </div>
                         <!-- card 3 -->
-                        <div class="card bg-white">
-                            <div class="bg-muteText m-1 md:m-4 rounded">
+                        <div onclick="itemAdder('kitchenItem3', 'kitchenItem3Price')" class="card bg-white">
+                            <div class="bg-muteText m-1 sm:m-4 rounded">
                                 <figure class="p-6">
                                     <img src="/images/prod3.png" alt="Shoes" class="rounded-xl" />
                                 </figure>
@@ -109,8 +109,140 @@
                                     <input type="radio" name="rating-3" class="mask mask-star bg-orange-400" />
                                     <input type="radio" name="rating-3" class="mask mask-star bg-orange-400" />
                                 </div>
-                                <h2 class="card-title text-regText font-semibold">Home Cooker</h2>
-                                <p class="text-muteText"><span>49.00</span> TK</p>
+                                <h2 id="kitchenItem3" class="card-title text-regText font-semibold">Home Cooker</h2>
+                                <p class="text-muteText"><span id="kitchenItem3Price">49.00</span> TK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sportswear section -->
+                <div class="mb-20">
+                    <h3 class="text-3xl text-regText font-bold mb-8">Sportswear</h3>
+                    <!-- cards section -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- card 1 -->
+                        <div onclick="itemAdder('SportswearItem1', 'SportswearItem1Price')" class="card bg-white">
+                            <div class="bg-muteText m-1 sm:m-4 rounded">
+                                <figure class="p-6">
+                                    <img src="/images/prod4.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                            </div>
+                            <div class="card-body items-center text-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" checked />
+                                    <input type="radio" name="rating-4" class="mask mask-star bg-orange-400" />
+                                </div>
+                                <h2 id="SportswearItem1" class="card-title text-regText font-semibold">Sports Back Cap
+                                </h2>
+                                <p class="text-muteText"><span id="SportswearItem1Price">49.00</span> TK</p>
+                            </div>
+                        </div>
+                        <!-- card 2 -->
+                        <div onclick="itemAdder('SportswearItem2', 'SportswearItem2Price')" class="card bg-white">
+                            <div class="bg-muteText m-1 sm:m-4 rounded">
+                                <figure class="p-6">
+                                    <img src="/images/prod5.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                            </div>
+                            <div class="card-body items-center text-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-5" class="mask mask-star bg-orange-400" checked />
+                                    <input type="radio" name="rating-5" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star bg-orange-400" />
+                                </div>
+                                <h2 id="SportswearItem2" class="card-title text-regText font-semibold">Full Jersey Set
+                                </h2>
+                                <p class="text-muteText"><span id="SportswearItem2Price">69.00</span> TK</p>
+                            </div>
+                        </div>
+                        <!-- card 3 -->
+                        <div onclick="itemAdder('SportswearItem3', 'SportswearItem3Price')" class="card bg-white">
+                            <div class="bg-muteText m-1 sm:m-4 rounded">
+                                <figure class="p-6">
+                                    <img src="/images/prod6.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                            </div>
+                            <div class="card-body items-center text-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-6" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-6" class="mask mask-star bg-orange-400" checked />
+                                    <input type="radio" name="rating-6" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-6" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-6" class="mask mask-star bg-orange-400" />
+                                </div>
+                                <h2 id="SportswearItem3" class="card-title text-regText font-semibold">Sports cates</h2>
+                                <p class="text-muteText"><span id="SportswearItem3Price">159.00</span> TK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sportswear section -->
+                <div>
+                    <h3 class="text-3xl text-regText font-bold mb-8">Furniture</h3>
+                    <!-- cards section -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- card 1 -->
+                        <div onclick="itemAdder('FurnitureItem1', 'FurnitureItem1Price')" class="card bg-white">
+                            <div class="bg-muteText m-1 sm:m-4 rounded">
+                                <figure class="p-6">
+                                    <img src="/images/prod4.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                            </div>
+                            <div class="card-body items-center text-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-7" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-7" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-7" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-7" class="mask mask-star bg-orange-400" checked />
+                                    <input type="radio" name="rating-7" class="mask mask-star bg-orange-400" />
+                                </div>
+                                <h2 id="FurnitureItem1" class="card-title text-regText font-semibold">Sports Back Cap
+                                </h2>
+                                <p class="text-muteText"><span id="FurnitureItem1Price">49.00</span> TK</p>
+                            </div>
+                        </div>
+                        <!-- card 2 -->
+                        <div onclick="itemAdder('FurnitureItem2', 'FurnitureIte21Price')" class="card bg-white">
+                            <div class="bg-muteText m-1 sm:m-4 rounded">
+                                <figure class="p-6">
+                                    <img src="/images/prod5.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                            </div>
+                            <div class="card-body items-center text-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-5" class="mask mask-star bg-orange-400" checked />
+                                    <input type="radio" name="rating-5" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-5" class="mask mask-star bg-orange-400" />
+                                </div>
+                                <h2 id="FurnitureItem2" class="card-title text-regText font-semibold">Full Jersey Set
+                                </h2>
+                                <p class="text-muteText"><span id="FurnitureIte2Price">69.00</span> TK</p>
+                            </div>
+                        </div>
+                        <!-- card 3 -->
+                        <div onclick="itemAdder('FurnitureIte3', 'FurnitureIte3Price')" class="card bg-white">
+                            <div class="bg-muteText m-1 sm:m-4 rounded">
+                                <figure class="p-6">
+                                    <img src="/images/prod6.png" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                            </div>
+                            <div class="card-body items-center text-center">
+                                <div class="rating">
+                                    <input type="radio" name="rating-6" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-6" class="mask mask-star bg-orange-400" checked />
+                                    <input type="radio" name="rating-6" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-6" class="mask mask-star bg-orange-400" />
+                                    <input type="radio" name="rating-6" class="mask mask-star bg-orange-400" />
+                                </div>
+                                <h2 id="FurnitureIte3" class="card-title text-regText font-semibold">Sports cates</h2>
+                                <p class="text-muteText"><span id="FurnitureIte3Price">159.00</span> TK</p>
                             </div>
                         </div>
                     </div>
@@ -123,26 +255,43 @@
                     <div class="bg-white p-6 rounded-xl">
                         <h4 class="text-2xl text-regText font-medium">Have coupon?</h4>
                         <div class="join mt-4">
-                            <input class="input input-bordered join-item w-full" placeholder="Coupon code" />
-                            <button class="btn join-item bg-btnBase text-white hover:text-btnBase font-semibold"
+                            <input id="voucher" class="input input-bordered join-item w-full"
+                                placeholder="Coupon code" />
+                            <button id="applyBtn"
+                                class="btn join-item bg-btnBase text-white hover:text-btnBase font-semibold"
                                 disabled>Apply</button>
                         </div>
                     </div>
                     <!-- Make purchase section -->
                     <div class="bg-white p-6 rounded-xl text-2xl text-regText font-medium">
                         <!-- order list -->
-                        <ol class="list-decimal px-6 space-y-3">
-                            
+                        <ol id="productList" class="list-decimal px-6 space-y-3">
+
                         </ol>
                         <hr class="w-full my-2">
                         <!-- product total -->
                         <div class="space-y-3">
-                            <p>Total price: <span>00.00</span>TK</p>
-                            <p>Discount : <span>00.00</span>TK</p>
-                            <p>Total: <span>00.00</span>TK</p>
+                            <p>Total price: <span id="priceTotal">00.00</span>TK</p>
+                            <p>Discount : <span id="discount">00.00</span>TK</p>
+                            <p>Total: <span id="orderTotal">00.00</span>TK</p>
                         </div>
                         <hr class="w-full my-2">
-                        <button class="btn join-item bg-btnBase text-white hover:text-btnBase font-semibold w-full" disabled>Make Purchase</button>
+                        <button onclick="my_modal_1.showModal()" id="makeIt"
+                            class="btn join-item bg-btnBase text-white hover:text-btnBase font-semibold w-full"
+                            disabled>Make Purchase</button>
+                        <!-- Modal -->
+                        <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box">
+                                <figure class="p-10">
+                                    <img src="/images/congo.png" alt="Shoes" class="w-1/2 rounded-xl mx-auto" />
+                                </figure>
+                                <h3 class="font-bold text-3xl text-regText text-center">Congratulations</h3>
+                                <p class="py-4 text-text-muteText text-center">Your Purchase the product</p>
+                                <button onclick="goHome()"
+                                    class="btn join-item bg-btnBase text-white hover:text-btnBase font-semibold block mx-auto">Go
+                                    Home</button>
+                            </form>
+                        </dialog>
                     </div>
                 </div>
             </div>
