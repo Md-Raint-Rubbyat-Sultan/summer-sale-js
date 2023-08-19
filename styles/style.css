@@ -5,3 +5,13 @@
 body {
     font-family: 'Work Sans', sans-serif;
 }
+
+/* header */
+.banner{
+    max-height: 806px;
+}
+/* main */
+/* cart */
+.cart{
+    margin-top: 68px;
+}
