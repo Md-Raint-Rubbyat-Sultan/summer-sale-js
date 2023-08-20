@@ -12,9 +12,10 @@ let totalPrice = 0;
 let voucherActive = false;
 
 // if voucher added
-function orderCalculate(){
+function orderCalculate() {
     const discountTotal = (totalPrice * 20) / 100;
     const subTotal = totalPrice - discountTotal;
+    priceTotal.innerText = totalPrice.toFixed(2);
     discount.innerText = discountTotal.toFixed(2);
     orderTotal.innerText = subTotal.toFixed(2);
 }
@@ -32,18 +33,19 @@ function itemAdder(itemNameId, itemPriceId) {
     const itemPriceValue = parseFloat(itemPrice);
     totalPrice += itemPriceValue;
     // setting total Price
-    priceTotal.innerText = totalPrice.toFixed(2);
-    orderTotal.innerText = totalPrice.toFixed(2);
+    // if voucher activated
+    if (voucherActive) {
+        orderCalculate();
+    } else {
+        priceTotal.innerText = totalPrice.toFixed(2);
+        orderTotal.innerText = totalPrice.toFixed(2);
+    }
     // activating Make purchase button & apply button
     if (totalPrice > 0) {
         makePurchase.removeAttribute("disabled", false);
         if (totalPrice >= 200) {
             apply.removeAttribute("disabled", false);
         }
-    }
-    // if voucher activated
-    if (voucherActive) {
-        orderCalculate();
     }
 }
 
@@ -68,5 +70,6 @@ function goHome() {
     discount.innerText = '00.00';
     apply.setAttribute("disabled", true);
     makePurchase.setAttribute("disabled", true);
+    totalPrice = 0;
     voucherActive = false;
 }
